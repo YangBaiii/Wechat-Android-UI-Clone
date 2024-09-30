@@ -1,0 +1,125 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation" />
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFF"
+        android:weightSum="4"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:elevation="4dp">
+
+        <!-- WeChat Navigation -->
+        <LinearLayout
+            android:id="@+id/nav_wechat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:onClick="onNavClick">
+
+            <ImageView
+                android:id="@+id/icon_wechat"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/wechat"
+                android:contentDescription="WeChat Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信"
+                android:textColor="#666"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_contacts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:onClick="onNavClick">
+
+            <ImageView
+                android:id="@+id/icon_contacts"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/contacts"
+                android:contentDescription="Contacts Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通讯录"
+                android:textColor="#666"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_discover"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:onClick="onNavClick">
+
+            <ImageView
+                android:id="@+id/icon_discover"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/explore"
+                android:contentDescription="Discover Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发现"
+                android:textColor="#666"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_me"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:onClick="onNavClick">
+
+            <ImageView
+                android:id="@+id/icon_me"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/me"
+                android:contentDescription="Me Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我"
+                android:textColor="#666"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
